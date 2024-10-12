@@ -1,0 +1,33 @@
+.gender_button > button, .receipt_button > button {
+    margin-right: 0.5rem;
+    outline: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+.gender_selected, .receipt_selected {
+    background-color: #0d6efd;
+    color: #FFF;
+}
+
+.selectBox_Vojohat {
+    background-color: rgb(56, 53, 53);
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+.selectBox_Vojohat_button_wrapper {
+    gap: 20px;
+}
+
+.selectBox_Vojohat_button {
+    width: 20%;
+}
+
+
+@media only screen and (max-width: 400px) {
+    .selectBox_Vojohat_button {
+        width: 25%;
+    }
+}

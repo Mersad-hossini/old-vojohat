@@ -1,0 +1,15 @@
+.website_links {
+  display: inline-flex;
+}
+
+.website_links img {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .slider_img {
+    height: 450px;
+  }
+}

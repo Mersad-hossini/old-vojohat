@@ -1,0 +1,7 @@
+.accordion-button {
+  justify-content: space-between;
+}
+
+.accordion-button::after {
+  margin: 0 !important;
+}

@@ -1,0 +1,128 @@
+.top_bar {
+  background-image: url("../../assets/images/header.jpg");
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+nav {
+  background-color: #fff;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 10; /* Ensures it stays above other content when scrolling */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav > ul {
+  margin: 0;
+}
+
+nav > ul > li > a {
+  background-image: linear-gradient(
+    to right,
+    #000,
+    #000 50%,
+    rgb(43, 46, 46) 50%
+  );
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 15px;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+nav > ul > li > a:before {
+  content: "";
+  background: #000;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+nav > ul > li > a:hover {
+  background-position: 0;
+}
+
+nav > ul > li > a:hover::before {
+  width: 100%;
+}
+
+.enter_panel {
+  border: 1px solid rgb(36, 37, 37);
+  color: rgb(36, 37, 37);
+  padding: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.enter_panel:hover {
+  background-color: rgb(36, 37, 37);
+  color: #fff;
+}
+
+/* Sidebar styles */
+
+.bars_icon_wrapper {
+  cursor: pointer;
+}
+
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  background-color: #333;
+  color: white;
+  position: fixed;
+  top: 0;
+  right: -200px; /* Hidden initially off-screen on the right */
+  transition: all 0.3s ease-in-out;
+  z-index: 999;
+}
+
+.sidebar.open {
+  right: 0; /* Move sidebar into view */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 20px;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.close_btn {
+  position: absolute;
+  left: 7px;
+  top: 7px;
+  font-size: 20px !important;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .top_bar {
+    height: 200px;
+    background-position: center;
+  }
+}
